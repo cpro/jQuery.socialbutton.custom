@@ -239,7 +239,8 @@ $.fn.socialbutton = function(service, options) {
 			text: '',
 			lang: 'ja', // ja / en /de / fr / es
 			via: '',
-			related: ''
+			related: '',
+			hashtags: ''
 		},
 		gree_sf: {
 			button: 0, // 0,1,2,3,4
@@ -530,6 +531,7 @@ function socialbutton_twitter(target, options, defaults, index, max_index)
 	var lang = options.lang || defaults.lang;
 	var via = options.via || defaults.via;
 	var related = options.related || defaults.related;
+	var hashtags = options.hashtags || defaults.hashtags;
 
 	var attr = merge_attributes({
 		'data-count': count,
@@ -537,7 +539,8 @@ function socialbutton_twitter(target, options, defaults, index, max_index)
 		'data-text': text,
 		'data-lang': lang,
 		'data-via': via,
-		'data-related': related
+		'data-related': related,
+		'data-hashtags': hashtags
 	});
 
 	var tag = '<a href="http://twitter.com/share" class="twitter-share-button"' + attr + '>Tweet</a>';
