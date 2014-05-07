@@ -756,7 +756,7 @@ function socialbutton_google_plusone(target, options, defaults, index, max_index
 		}
 
 		if (typeof gapi === 'undefined' || typeof gapi.plusone === 'undefined') {
-			$('body').append('<script type="text/javascript" src="https://apis.google.com/js/plusone.js">' + script_params + '</script>');
+			$('body').append('<script type="text/javascript" src="https://apis.google.com/js/platform.js">' + script_params + '</script>');
 		} else {
 			gapi.plusone.go();
 		}
